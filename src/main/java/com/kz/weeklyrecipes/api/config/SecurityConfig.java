@@ -11,6 +11,7 @@ import org.springframework.security.web.SecurityFilterChain;
 public class SecurityConfig {
 
   @Bean
+  @SuppressWarnings("unused")
   SecurityFilterChain security(HttpSecurity http) throws Exception {
     http
       .csrf(csrf -> csrf.disable()) // REST/JSON APIs (no browser forms); revisit if you add sessions
