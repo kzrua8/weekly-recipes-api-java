@@ -1,4 +1,4 @@
-package com.kz.weeklyrecipes.weekly_recipes_api_java;
+package com.kz.weeklyrecipes;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
