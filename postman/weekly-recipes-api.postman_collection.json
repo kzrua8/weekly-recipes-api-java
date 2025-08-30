@@ -1,0 +1,58 @@
+{
+  "info": {
+    "name": "Weekly Recipes API",
+    "_postman_id": "12345678-abcd-efgh-ijkl-1234567890ab",
+    "description": "Collection for testing Weekly Recipes backend endpoints",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get all recipes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/recipes",
+          "protocol": "http",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "recipes"]
+        }
+      }
+    },
+    {
+      "name": "Create a recipe",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Miso Soup\",\n  \"steps\": \"Boil dashi, add miso.\",\n  \"ingredients\": [\n    { \"name\": \"miso\", \"quantity\": 30, \"unit\": \"GRAM\" }\n  ]\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/recipes",
+          "protocol": "http",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "recipes"]
+        }
+      }
+    },
+    {
+      "name": "Get weekly plan",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/api/weeks/2025-08-25/plan",
+          "protocol": "http",
+          "host": ["{{baseUrl}}"],
+          "path": ["api", "weeks", "2025-08-25", "plan"]
+        }
+      }
+    }
+  ]
+}

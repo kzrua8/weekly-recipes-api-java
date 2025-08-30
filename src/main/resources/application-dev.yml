@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/weekly_recipes
+    username: recipes
+    password: devpass
+  jpa:
+    hibernate:
+      ddl-auto: validate # use Flyway to manage schema; change to 'update' only temporarily
+    properties:
+      hibernate:
+        format_sql: true
+        jdbc.time_zone: UTC
+  flyway:
+    enabled: true
+    locations: classpath:db/migration
+
+logging:
+  level:
+    org.hibernate.SQL: debug # see SQL in logs (optional)
+    org.hibernate.type: trace # bind params (chatty; optional)

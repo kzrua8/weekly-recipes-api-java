@@ -1,4 +1,4 @@
-package com.kz.weeklyrecipes.weekly_recipes_api_java;
+package com.kz.weeklyrecipes;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
