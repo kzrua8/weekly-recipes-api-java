@@ -1,4 +1,4 @@
-package com.kz.weeklyrecipes.api.config;
+package com.kz.weeklyrecipes.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

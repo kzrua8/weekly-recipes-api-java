@@ -14,9 +14,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.kz.weeklyrecipes.api.dto.IngredientDto;
-import com.kz.weeklyrecipes.api.dto.RecipeDto;
-import com.kz.weeklyrecipes.api.dto.WeeklyPlanResponse;
+import com.kz.weeklyrecipes.dto.IngredientDto;
+import com.kz.weeklyrecipes.dto.RecipeDto;
+import com.kz.weeklyrecipes.dto.WeeklyPlanResponse;
 
 @RestController
 @RequestMapping("/api")

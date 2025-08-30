@@ -1,0 +1,13 @@
+CREATE TABLE recipes (
+  id BIGSERIAL PRIMARY KEY,
+  name TEXT NOT NULL,
+  steps TEXT
+);
+
+CREATE TABLE ingredients (
+  id BIGSERIAL PRIMARY KEY,
+  recipe_id BIGINT NOT NULL REFERENCES recipes(id) ON DELETE CASCADE,
+  name TEXT NOT NULL,
+  quantity DOUBLE PRECISION NOT NULL,
+  unit TEXT NOT NULL
+);

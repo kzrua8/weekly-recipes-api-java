@@ -18,6 +18,10 @@ springdoc:
   api-docs:
     enabled: true
 
+spring:
+  profiles:
+    default: dev
+
 # ------------------ Dev profile (H2) ------------------
 ---
 spring:

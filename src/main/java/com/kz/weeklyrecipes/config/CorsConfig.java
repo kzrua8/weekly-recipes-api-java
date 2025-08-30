@@ -1,5 +1,5 @@
 // src/main/java/com/kz/weeklyrecipes/api/config/CorsConfig.java
-package com.kz.weeklyrecipes.api.config;
+package com.kz.weeklyrecipes.config;
 
 import java.util.List;
 
