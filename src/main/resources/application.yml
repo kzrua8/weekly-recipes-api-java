@@ -1,57 +1,24 @@
-# src/main/resources/application.yml
 # ------------------ Common (all profiles) ------------------
 spring:
+  profiles:
+    default: dev # pick 'dev' unless explicitly overridden
   jpa:
     hibernate:
-      ddl-auto: validate # rely on Flyway/migrations, not auto-create
+      ddl-auto: validate
     open-in-view: false
   mvc:
     problemdetails:
       enabled: true
+
 server:
   port: 8080
 
-# Swagger UI (springdoc) - move under 'dev' if desired
+# Swagger UI (springdoc) - common
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
   api-docs:
     enabled: true
-
-spring:
-  profiles:
-    default: dev
-
-# ------------------ Dev profile (H2) ------------------
----
-spring:
-  config:
-    activate:
-      on-profile: dev
-  datasource:
-    url: jdbc:h2:mem:recipes;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
-    username: sa
-    password:
-  h2:
-    console:
-      enabled: true
-      settings:
-        web-allow-others: false
-
-# optional CORS for Vite dev server
-# (remove if already configure CORS in code)
-#  web:
-#    cors:
-#      mappings:
-#        - path: /api/**
-#          allowed-origins: "http://localhost:5173"
-#          allowed-methods: "*"
-
-logging:
-  level:
-    org.springframework: info
-    org.hibernate.SQL: debug # see SQL in dev
-    org.hibernate.type: off
 
 # ------------------ Prod profile (PostgreSQL) ------------------
 ---
@@ -69,7 +36,6 @@ spring:
         jdbc:
           time_zone: UTC
 
-# Actuator
 management:
   endpoints:
     web:
